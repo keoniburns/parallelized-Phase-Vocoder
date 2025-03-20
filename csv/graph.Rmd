@@ -1,0 +1,69 @@
+---
+title: "Untitled"
+author: "Keoni Burns"
+date: "2023-12-15"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+
+# Replace "path/to/your/data.csv" with the actual path to your CSV file
+
+
+# Read the CSV data from the file
+data <- read.csv("1min.csv")
+data2 <- read.csv("1minmpi.csv")
+print(data)
+
+# Create a line plot with individual lines for each worker
+plot <- ggplot(data, aes(x = threads, y = speedup, group = workers, color = as.factor(workers))) +
+  geom_line() +
+  labs(title = "Speedup vs. Number of Threads", x = "Number of Threads", y = "Speedup", color = "Workers") +
+  scale_color_discrete(name = "Workers") +
+  theme_minimal()
+
+# Show the plot
+plot2 <- ggplot(data2, aes(x = procs, y = speedup, group = workers, color = as.factor(workers))) +
+  geom_line() +
+  labs(title = "Speedup vs. Number of processes", x = "Number of Threads", y = "Speedup", color = "Workers") +
+  scale_color_discrete(name = "Workers") +
+  theme_minimal()
+
+
+print(plot)
+print(plot2)
+
+```
+
+```{r}
+library(ggplot2)
+
+# Replace "path/to/your/data.csv" with the actual path to your CSV file
+
+
+# Read the CSV data from the file
+data <- read.csv("5min.csv")
+data2 <- read.csv("5minmpi.csv")
+print(data)
+
+# Create a line plot with individual lines for each worker
+plot <- ggplot(data, aes(x = threads, y = speedup, group = workers, color = as.factor(workers))) +
+  geom_line() +
+  labs(title = "Speedup vs. Number of Threads", x = "Number of Threads", y = "Speedup", color = "Workers") +
+  scale_color_discrete(name = "Workers") +
+  theme_minimal()
+
+# Show the plot
+
+
+plot2 <- ggplot(data2, aes(x = procs, y = speedup, group = workers, color = as.factor(workers))) +
+  geom_line() +
+  labs(title = "Speedup vs. Number of processes", x = "Number of Threads", y = "Speedup", color = "Workers") +
+  scale_color_discrete(name = "Workers") +
+  theme_minimal()
+
+print(plot)
+print(plot2)
+
+```
