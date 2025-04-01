@@ -1,9 +1,4 @@
-keoni Burns  
-CSCI 581
-
-# Final Report
-
-### Problem
+## Problem
 
 the problem I chose was to adapt a pitch shifting program that utilizes the cooley-tukey fast fourier transform. Pitch shifting can be broken down into a couple of portions: Analysis, processing, synthesis, and accumulation. each of the portions are essential to correctly producing either a higher or lower pitch sound while maintaining the original length of the audiofile. The high level overview of how this works is as follows:
 
